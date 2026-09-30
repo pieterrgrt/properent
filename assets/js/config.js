@@ -22,6 +22,8 @@ window.PROPERENT = {
   // uit de database en aanvragen worden daarin opgeslagen. Leeg = de site
   // gebruikt data/woningen.js. De "anon key" is openbaar en mag hier staan.
   supabaseUrl: "",
+  // true = beheeromgeving draait met verzonnen voorbeelddata (om te laten zien)
+  demo: false,
   supabaseAnonKey: "",
 
   // Formulierdienst (bijv. Formspree: https://formspree.io/f/xxxxxxx).
