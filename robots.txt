@@ -3,5 +3,7 @@ Allow: /
 Disallow: /partials/
 Disallow: /tools/
 Disallow: /docs/
+Disallow: /beheer/
+Disallow: /supabase/
 
 Sitemap: https://www.properent.nl/sitemap.xml

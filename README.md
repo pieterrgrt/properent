@@ -6,6 +6,7 @@ Een eenvoudige, snelle website van gewone HTML-, CSS- en JavaScript-bestanden. E
 
 - Huisstijl (logo, kleuren, lettertype, toon): [`docs/HUISSTIJL.md`](docs/HUISSTIJL.md)
 - Sitemap en paginastructuur: [`docs/SITEMAP.md`](docs/SITEMAP.md)
+- Beheeromgeving (woningen, aanvragen, huurders): [`docs/BEHEER.md`](docs/BEHEER.md)
 
 ## Structuur
 
@@ -18,8 +19,10 @@ faq.html          Veelgestelde vragen
 contact.html      Contact + formulier
 privacy.html      Privacyverklaring
 404.html          Pagina niet gevonden
-data/woningen.js  ← HET AANBOD (hier woningen toevoegen/verwijderen)
-assets/js/config.js ← CONTACTGEGEVENS (e-mail, telefoon, KvK, adres)
+data/woningen.js  ← HET AANBOD zolang er geen database is gekoppeld
+assets/js/config.js ← CONTACTGEGEVENS (e-mail, telefoon, KvK, adres) + databasekoppeling
+beheer/           Beheeromgeving (inloggen op /beheer/)
+supabase/         Database-opzet voor de beheeromgeving
 assets/css/style.css  Opmaak
 assets/js/main.js     Werking (filters, formulier, enz.)
 assets/img/           Logo's, favicon, social-afbeelding
@@ -43,7 +46,9 @@ python3 -m http.server 8000
 
 ### Woning toevoegen, wijzigen of verwijderen
 
-Open `data/woningen.js`. Bovenin staat bij elk veld wat het betekent.
+**Met de beheeromgeving** (aanbevolen): log in op `/beheer/` en ga naar *Woningen*. Instellen: zie [`docs/BEHEER.md`](docs/BEHEER.md).
+
+**Zonder beheeromgeving:** open `data/woningen.js`. Bovenin staat bij elk veld wat het betekent.
 
 1. Kopieer een bestaand blok `{ … },` en pas de gegevens aan.
 2. Geef elke woning een unieke `id` (kleine letters, streepjes, geen spaties).
@@ -103,7 +108,8 @@ De site noemt geen namen en toont geen foto's van de eigenaar, en spreekt overal
 
 - [ ] Echte woningen en foto's in `data/woningen.js` (voorbeelden verwijderen)
 - [ ] Contactgegevens, KvK-nummer en adres in `assets/js/config.js`
-- [ ] Formulierdienst instellen (`formEndpoint`)
+- [ ] Beheeromgeving instellen ([`docs/BEHEER.md`](docs/BEHEER.md))
+- [ ] Formulierdienst instellen (`formEndpoint`) voor e-mailmeldingen
 - [ ] Privacyverklaring nalopen en eventueel naam van de formulierdienst toevoegen
 - [ ] Domein koppelen en `sitemap.xml` aanmelden bij Google
 - [ ] Controleren of de voorwaarden in de FAQ (borg, inkomen, contracten) kloppen met de eigen werkwijze

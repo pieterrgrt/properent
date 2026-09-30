@@ -18,8 +18,15 @@ window.PROPERENT = {
   // Bereikbaarheid, zoals getoond op de contactpagina.
   bereikbaar: "Ma t/m vr, 9:00 – 17:00 uur",
 
+  // Beheeromgeving (Supabase). Zie docs/BEHEER.md. Ingevuld = woningen komen
+  // uit de database en aanvragen worden daarin opgeslagen. Leeg = de site
+  // gebruikt data/woningen.js. De "anon key" is openbaar en mag hier staan.
+  supabaseUrl: "",
+  supabaseAnonKey: "",
+
   // Formulierdienst (bijv. Formspree: https://formspree.io/f/xxxxxxx).
-  // Leeg laten = het formulier opent een vooringevulde e-mail.
+  // Handig als e-mailmelding naast de database. Zijn beide leeg, dan opent
+  // het formulier een vooringevulde e-mail.
   formEndpoint: "",
 
   // Wettelijk verplicht op een zakelijke website: KvK-nummer en een adres.
